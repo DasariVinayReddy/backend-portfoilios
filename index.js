@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import { sendEmail } from "./sendEmail.js";
 
 const app = express();
-const port = 8010;
+const port = 8000;
 app.use(cors());
 
 // Middleware setup
