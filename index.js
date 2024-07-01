@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import { sendEmail } from "./sendEmail.js";
 
 const app = express();
-const port = 8000;
+
 app.use(cors());
 
 // Middleware setup
@@ -31,7 +31,7 @@ app.get("*", (req, res) => {
     'Server is working. Please POST at "/api/sendEmail" to submit a message.'
   );
 });
-
+const port = process.env.PORT;
 // Start server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
